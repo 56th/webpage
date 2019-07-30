@@ -68,7 +68,7 @@
         margin-bottom: 15px;
       }
       a {
-		color: #312d3c; /* 624d95 */
+		    color: #312d3c; /* 624d95 */
         text-decoration: underline;
       }
       a:hover, a:active {
@@ -97,7 +97,7 @@
       <img src="avatar.jpg">
       <div id="name">
         <h1>Alexander Zhiliakov</h1>
-        <span>PhD, 2017&#8202;–&#8202;23 @ <a href="http://www.uh.edu/nsm/">UH NSM</a><br>BCS, 2013&#8202;–&#8202;17 @ <a href="http://en.nstu.ru/faculties/faculty_of_applied_mathematics_and_computer_science/">NSTU</a></span>
+        <span>PhD, 2017&#8202;–&#8202;23 @ <a href="http://www.uh.edu/nsm/">UH NSM</a><br>BCS, 2013&#8202;–&#8202;17 @ <a href="https://en.nstu.ru/education/faculty-of-applied-mathematics-and-computer-science/">NSTU</a></span>
       </div>
       <div style="clear: both;"></div>
       <!--
@@ -131,11 +131,11 @@
       	removeNiceColors = function() {
             this.children[0].style.color = ""
         }
-	for (var i = 0; i < navLinks.length; ++i) {
-	    navLinks[i].addEventListener("mouseover", addNiceColors)
+	      for (var i = 0; i < navLinks.length; ++i) {
+	          navLinks[i].addEventListener("mouseover", addNiceColors)
        	    navLinks[i].addEventListener("mouseout", removeNiceColors)
-    	}
-	document.getElementById('cv').setAttribute('href', 'alexander_zhiliakov_cv.pdf?nocache=' + Math.random());
+    	  }
+	      document.getElementById('cv').setAttribute('href', 'alexander_zhiliakov_cv.pdf?nocache=' + Math.random());
     </script>
   </body>
 </html>
