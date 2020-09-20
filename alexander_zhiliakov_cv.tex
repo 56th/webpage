@@ -1,6 +1,5 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-% \usepackage{nopageno}
 \usepackage[left=1.5cm, right=1.5cm, top=1cm, bottom=1cm, includefoot, heightrounded]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{uofh}{RGB}{200, 16, 46}
@@ -10,7 +9,7 @@
 \usepackage{titlesec}
 \titleformat*{\section}{\centering\large\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
-%\titlespacing*{\subsection}{0pt}{15pt}{0pt}
+\titleformat*{\subsubsection}{\normalsize}
 % paragraph
 \setlength\parindent{0pt}
 % tabular
@@ -39,6 +38,30 @@
 \usepackage{lastpage}
 \cfoot{\thepage\ of \pageref*{LastPage}}
 
+% https://tex.stackexchange.com/a/438744/135296
+\usepackage{etoolbox}
+\makeatletter
+\define@boolkey[EM]{etaremune}{resume}[true]{}
+\presetkeys[EM]{etaremune}{resume=false}{} 
+\AtEndEnvironment{etaremune}{%
+	\ifEM@etaremune@resume
+	\EM@resumewrite{\csname EM@prevlist@\@roman{\@enumdepth}\endcsname}{\EM@currlist}%
+	\fi
+	\expandafter\xdef\csname EM@prevlist@\@roman{\@enumdepth}\endcsname{\EM@currlist}%
+}
+\newcommand*\EM@resumewrite[2]{%
+	\begingroup
+	\edef\temp{\noexpand\EM@resumewrite@
+		{\expandafter\string\csname etaremune@#1\endcsname}%
+		{\expandafter\string\csname etaremune@#2\endcsname}}%
+	\temp
+	\endgroup
+}
+\newcommand*\EM@resumewrite@[2]{%
+	\immediate\write\@auxout{\xdef#1{\string\noexpand\string\the\numexpr#1+\string\noexpand#2 }}%
+}
+\makeatother
+
 \begin{document}
 
 	\section*{CV of Alexander Zhiliakov}
@@ -56,6 +79,11 @@
 	\subsection*{Experience}
 	
 	\begin{longtable}{ l >{\raggedright\arraybackslash}p{15cm} }
+		Summer 2020
+			& \textbf{Student Placement}\vspace{1mm}\\
+			& \href{https://corporate.exxonmobil.com/}{ExxonMobil} Upstream Research Company, Reservoir Simulation Section\vspace{1mm}\\
+			& Implementing \& researching constrained mesh adaptation techniques for \href{https://en.wikipedia.org/wiki/Hydraulic_fracturing}{hydrofrac} simulations\vspace{1mm}\\
+			& Contacts: Vadim Dyadechko (mentor), Dakshina Valiveti (teamlead) \vspace{3mm}\\
 		2019 --
 			& \textbf{Graduate Research Assistant}\vspace{1mm}\\
 			& University of Houston, \href{http://www.uh.edu/nsm/math/}{Department of Mathematics}\vspace{1mm}\\
@@ -107,6 +135,8 @@
 	
 	\begin{etaremune}[topsep=0pt]
 %		\item \textit{\href{}{Extension of the approximate static condensation method for multi-material diffusion problems to 3D}}, A.~Zhiliakov et al.\\ \href{}{LANL report}, in progress
+		\item \textit{\href{https://arxiv.org/abs/2006.14125}{Experimental validation of a phase-field model to predict coarsening dynamics of lipid domains in multicomponent membranes}}, A.~Zhiliakov, Y.~Wang, A.~Quaini, M.~Olshanskii, S.~Majd\\
+		\href{https://doi.org/10.1016/j.bbamem.2020.183446}{Biochimica et Biophysica Acta}, Jan 2021
 		\item \textit{\href{https://arxiv.org/abs/2003.06972}{Error analysis of higher order trace finite element methods for the surface Stokes equations}}, T.~Junkuhn, M.~Olshanskii, A.~Reusken, A.~Zhiliakov\\ Preprint, March 2020
 		\item \textit{\href{https://arxiv.org/abs/1909.02990}{Inf-sup stability of the trace $\mathbf P_2$--$P_1$ Taylor--Hood elements for surface PDEs}}, M.~Olshanskii, A.~Reusken, A.~Zhiliakov\\ \href{https://doi.org/10.1090/mcom/3551}{AMS: Mathematics of Computation}, Sep 2019 
 		\item \textit{\href{https://www.researchgate.net/publication/333900759_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A higher order approximate static condensation method for multi-material diffusion problems}}, A.~Zhiliakov, D.~Svyatsky, M.~Olshanskii, E.~Kikinzon, M.~Shashkov\\ \href{https://doi.org/10.1016/j.jcp.2019.06.044}{Journal of Computational Physics}, Oct 2019 
@@ -125,13 +155,23 @@
 
 	\subsection*{Conferences and Talks}
 	
+	\subsubsection*{\textit{Unfitted finite element methods for fluid flows on surfaces}}
 	\begin{etaremune}[topsep=0pt]
-		\item \textit{A higher order approximate static condensation method for multi-material diffusion problems}, talk @ \href{https://www.baylor.edu/math/index.php?id=966337}{Finite Element Rodeo 2020}, Waco, TX, 28 Feb 2020
-		\item \textit{\href{https://www.researchgate.net/publication/335880120_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A higher order approximate static condensation method for multi-material diffusion problems}}, talk by D.~Svyatsky @ \href{https://webmagazine.unitn.it/en/evento/dicam/44676/multimat2019}{MultiMat 2019: 9th International Conference on Numerical Methods for Multi-Material Fluid Flow}, Trento, Italy, 13 Sep 2019
-		\item \textit{\href{https://www.researchgate.net/publication/331674777_Generalized_approximate_static_condensation_method_for_a_heterogeneous_multi-material_diffusion_problem}{Generalized approximate static condensation method for a heterogeneous multi-material diffusion problem}}, poster @ \href{https://www.siam.org/Conferences/CM/Main/gs19}{SIAM Conference on Mathematical \& Computational Issues in the Geosciences}, Houston, TX, 12 Mar 2019
-		\item \textit{A higher order approximate static condensation method for multi-material diffusion problems}, talk @ \href{https://www.siam.org/Conferences/CM/Main/cse19}{SIAM Conference on Computational Science and Engineering}, Spokane, WA, 27 Feb 2019
-		\item \textit{Generalized approximate static condensation method for a heterogeneous multi-material diffusion problem}, talk @ \href{https://www.siam.org/Conferences/CM/Main/txla18}{SIAM Louisiana-Texas Section Conference}, Baton Rouge, LA, 7 Oct 2018
-		\item \textit{\href{https://www.researchgate.net/publication/316884102_Mnogosetocnye_metody_resenia_ellipticeskih_zadac}{Multigrid techniques for solving elliptic problems}}, talk @ \href{https://ami.nstu.ru/o-fakultete/news/1699/}{FAMCS NSTU Student Scientific Conference} on Numerical Modeling in Physics, Novosibirsk, Russia, Mar 2017
+		\item Talk @ \href{https://www.siam.org/conferences/cm/conference/cse21}{SIAM Conference on Computational Science and Engineering}, Fort Worth, TX, 1--5~Mar~2021
+		\item Talk @ \href{https://www.math.tamu.edu/conferences/SIAMTXLA/}{SIAM Texas-Louisiana Section Annual Meeting}, virtual meeting
+		hosted by Texas A\&M University, 16--18 Oct 2020
+	\end{etaremune}
+	\subsubsection*{\textit{\href{https://www.researchgate.net/publication/335880120_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A higher order approximate static condensation method for multi-material diffusion problems}}}	
+	\begin{etaremune}[resume]
+		\item Talk @ \href{https://www.baylor.edu/math/index.php?id=966337}{Finite Element Rodeo 2020}, Waco, TX, 28 Feb 2020
+		\item Talk by D.~Svyatsky @ \href{https://webmagazine.unitn.it/en/evento/dicam/44676/multimat2019}{MultiMat 2019: 9th International Conference on Numerical Methods for Multi-Material Fluid Flow}, Trento, Italy, 13 Sep 2019	
+		\item \href{https://www.researchgate.net/publication/331674777_Generalized_approximate_static_condensation_method_for_a_heterogeneous_multi-material_diffusion_problem}{Poster} @ \href{https://www.siam.org/Conferences/CM/Main/gs19}{SIAM Conference on Mathematical \& Computational Issues in the Geosciences}, Houston, TX, 12 Mar 2019
+		\item Talk @ \href{https://www.siam.org/Conferences/CM/Main/cse19}{SIAM Conference on Computational Science and Engineering}, Spokane, WA, 27~Feb~2019
+		\item Talk @ \href{https://www.siam.org/Conferences/CM/Main/txla18}{SIAM Texas-Louisiana Section Annual Meeting}, Baton Rouge, LA, 7 Oct 2018
+	\end{etaremune}
+	\subsubsection*{\textit{\href{https://www.researchgate.net/publication/316884102_Mnogosetocnye_metody_resenia_ellipticeskih_zadac}{Multigrid techniques for solving elliptic problems}}}	
+	\begin{etaremune}[resume]		
+		\item Talk @ \href{https://ami.nstu.ru/o-fakultete/news/1699/}{FAMCS NSTU Student Scientific Conference} on Numerical Modeling in Physics, Novosibirsk, Russia, Mar 2017
 	\end{etaremune}
 
 	\subsection*{School Projects}
