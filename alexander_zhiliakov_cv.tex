@@ -71,7 +71,7 @@
 		\phantom{Summer 2018} & 3551 Cullen Blvd (PGH Building), Houston, TX\,77204\vspace{2mm}\\
 		Contacts:		& \href{https://telegram.me/fiftysixth}{@fiftysixth} (Telegram), \href{mailto:alex@math.uh.edu}{alex@math.uh.edu}\vspace{2mm}\\
 		Homepage:		& \href{https://www.math.uh.edu/~alex}{math.uh.edu/${\sim}$alex}\vspace{2mm}\\
-		Major skills:	& Scientific computing, applied mathematics, numerical analysis, (unfitted) finite element methods, preconditioners, computational fluid dynamics, computational haemodynamics, Unix\,/\,Windows, git, HPC (slurm, PAPI\,/\,TAU, OpenMP, Trilinos, Intel MKL), cmake, \texttt{C++\,11\,/\,17}, \texttt{FORTRAN}, \texttt{Wolfram Mathematica}\vspace{2mm}\\
+		Major skills:	& Scientific computing, applied mathematics, numerical analysis, (unfitted) finite element methods, preconditioners, computational fluid dynamics, computational haemodynamics, Unix\,/\,Windows, git, HPC (slurm, PAPI\,/\,TAU, OpenMP, Trilinos, Intel MKL), cmake, \texttt{C++\,11\,/\,17}, \texttt{FORTRAN}, \texttt{python}, \texttt{Wolfram Mathematica}\vspace{2mm}\\
 		Languages:		& Russian (first), English (fluent)\vspace{3mm}\\
 		\multicolumn{2}{p{17cm}}{I ask and answer questions on scientific computing on~\href{https://scicomp.stackexchange.com/users/21916/56th}{SciComp}. You can follow my research on~\href{https://www.researchgate.net/profile/Alexander_Zhiliakov}{ResearchGate} and \href{https://scholar.google.com/citations?user=wchxEFUAAAAJ}{Google Scholar}. My code contributions are available on \href{https://github.com/56th}{Github}.}\\
 	\end{longtable} 
@@ -79,24 +79,26 @@
 	\subsection*{Experience}
 	
 	\begin{longtable}{ l >{\raggedright\arraybackslash}p{15cm} }
-		Summer 2020
-			& \textbf{Student Placement}\vspace{1mm}\\
-			& \href{https://corporate.exxonmobil.com/}{ExxonMobil} Upstream Research Company, Reservoir Simulation Section\vspace{1mm}\\
-			& Implementing \& researching constrained mesh adaptation techniques for \href{https://en.wikipedia.org/wiki/Hydraulic_fracturing}{hydrofrac} simulations\vspace{1mm}\\
-			& Contacts: Vadim Dyadechko (mentor), Dakshina Valiveti (teamlead) \vspace{3mm}\\
 		2019 --
 			& \textbf{Graduate Research Assistant}\vspace{1mm}\\
 			& University of Houston, \href{http://www.uh.edu/nsm/math/}{Department of Mathematics}\vspace{1mm}\\
+		Fall 2020
+			& Developing \href{https://www.math.uh.edu/~molshan/tracefinite.html}{trace FEM} discretization for Navier--Stokes--Cahn--Hilliard model for two-phase surface flows\vspace{1mm}\\	
 		Spring 2020
-			& Researching higher order  \href{https://www.math.uh.edu/~molshan/tracefinite.html}{trace FEM} discretizations for surface (Navier--)Stokes equations and performing qualitative\,/\,quantitative comparison of numerical and experimental data for \href{https://www.math.uh.edu/~molshan/material.html}{surface phase separation in bio-membranes}\vspace{1mm}\\
+			& Researching higher order trace FEM discretizations for surface (Navier--)Stokes equations and performing qualitative\,/\,quantitative comparison of numerical and experimental data for \href{https://www.math.uh.edu/~molshan/material.html}{surface phase separation in bio-membranes}\vspace{1mm}\\
 		Fall 2019
 			& Designing \& implementing robust solvers\,/\,preconditioners for surface Oseen-type problem discretized with trace FEM\vspace{1mm}\\
 		Spring 2019
 			& Implementing Taylor--Hood~($\mathbf{P}_2$--$P_1$) finite elements for trace FEM discretization of (Navier--)Stokes equations posed on a surface; Investigating inf-sup stability\vspace{1mm}\\
 			& Contacts: Maxim Olshanskii \href{mailto:molshan@math.uh.edu}{molshan@math.uh.edu} (advisor), Arnold Reusken \href{mailto:reusken@igpm.rwth-aachen.de}{reusken@igpm.rwth-aachen.de}, Annalisa Quaini \href{mailto:quaini@math.uh.edu}{quaini@math.uh.edu}, Sheereen Majd \href{mailto:smajd9@uh.edu}{smajd9@uh.edu}, Vladimir Yushutin \href{mailto:yushutin@math.uh.edu}{yushutin@math.uh.edu}\vspace{3mm}\\
+		Summer 2020
+			& \textbf{Student Placement}\vspace{1mm}\\
+			& \href{https://corporate.exxonmobil.com/}{ExxonMobil} Upstream Research Company, Reservoir Simulation Section\vspace{1mm}\\
+			& Implementing \& researching constrained mesh adaptation techniques for \href{https://en.wikipedia.org/wiki/Hydraulic_fracturing}{hydrofrac} simulations\vspace{1mm}\\
+			& Contacts: Vadim Dyadechko (mentor), Dakshina Valiveti (teamlead) \vspace{3mm}\\			
 		2018 -- 2019
 			& \textbf{Graduate Research Assistant}\vspace{1mm}\\
-			& Los Alamos National Laboratory, \href{http://www.lanl.gov/org/padste/adtsc/theoretical/applied-mathematics-plasma-physics}{Applied Mathematics and Plasma Physics Group}\vspace{1mm}\\
+			& Los Alamos National Laboratory, \href{https://www.lanl.gov/org/ddste/aldsc/theoretical/applied-mathematics-plasma-physics/index.php}{Applied Mathematics and Plasma Physics Group}\vspace{1mm}\\
 		Summer 2019
 			& Generalizing analysis \& implementation of the \href{https://www.researchgate.net/publication/330912268_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{higher order approximate static condensation (ASC)} algorithm to 3D\vspace{1mm}\\
 		Summer 2018
@@ -135,11 +137,14 @@
 	
 	\begin{etaremune}[topsep=0pt]
 %		\item \textit{\href{}{Extension of the approximate static condensation method for multi-material diffusion problems to 3D}}, A.~Zhiliakov et al.\\ \href{}{LANL report}, in progress
+		\item \textit{\href{https://arxiv.org/abs/2012.10073}{Recycling augmented Lagrangian preconditioner in an incompressible fluid solver}}, M.~Olshanskii, A.~Zhiliakov\\
+		Preprint, Dec 2020
+		\item \textit{\href{https://arxiv.org/abs/2003.06972}{Error analysis of higher order trace finite element methods for the surface Stokes equations}}, T.~Junkuhn, M.~Olshanskii, A.~Reusken, A.~Zhiliakov\\
+		\href{https://doi.org/10.1515/jnma-2020-0017}{Journal of Numerical Mathematics}, Oct 2020		
 		\item \textit{\href{https://arxiv.org/abs/2006.14125}{Experimental validation of a phase-field model to predict coarsening dynamics of lipid domains in multicomponent membranes}}, A.~Zhiliakov, Y.~Wang, A.~Quaini, M.~Olshanskii, S.~Majd\\
-		\href{https://doi.org/10.1016/j.bbamem.2020.183446}{Biochimica et Biophysica Acta}, Jan 2021
-		\item \textit{\href{https://arxiv.org/abs/2003.06972}{Error analysis of higher order trace finite element methods for the surface Stokes equations}}, T.~Junkuhn, M.~Olshanskii, A.~Reusken, A.~Zhiliakov\\ Preprint, March 2020
+		\href{https://doi.org/10.1016/j.bbamem.2020.183446}{Biochimica et Biophysica Acta}, Aug 2020
 		\item \textit{\href{https://arxiv.org/abs/1909.02990}{Inf-sup stability of the trace $\mathbf P_2$--$P_1$ Taylor--Hood elements for surface PDEs}}, M.~Olshanskii, A.~Reusken, A.~Zhiliakov\\ \href{https://doi.org/10.1090/mcom/3551}{AMS: Mathematics of Computation}, Sep 2019 
-		\item \textit{\href{https://www.researchgate.net/publication/333900759_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A higher order approximate static condensation method for multi-material diffusion problems}}, A.~Zhiliakov, D.~Svyatsky, M.~Olshanskii, E.~Kikinzon, M.~Shashkov\\ \href{https://doi.org/10.1016/j.jcp.2019.06.044}{Journal of Computational Physics}, Oct 2019 
+		\item \textit{\href{https://www.researchgate.net/publication/333900759_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A higher order approximate static condensation method for multi-material diffusion problems}}, A.~Zhiliakov, D.~Svyatsky, M.~Olshanskii, E.~Kikinzon, M.~Shashkov\\ \href{https://doi.org/10.1016/j.jcp.2019.06.044}{Journal of Computational Physics}, June 2019 
 %		\item \textit{\href{https://www.researchgate.net/publication/330912268_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A Higher Order Approximate Static Condensation Method for Multi-Material Diffusion Problems}}, A. Zhiliakov, D. Svyatsky, M. Olshanskii, E. Kikinzon, M. Shashkov\\ Journal of Computational Physics (preprint), 2019 
 		\item \textit{\href{https://www.researchgate.net/publication/329327346_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{A higher order approximate static condensation method for multi-material diffusion problems}}, A.~Zhiliakov, D.~Svyatsky, M.~Olshanskii, E.~Kikinzon, M.~Shashkov\\ \href{https://permalink.lanl.gov/object/tr?what=info:lanl-repo/lareport/LA-UR-18-31169}{LANL report LA-UR-18-31169}, Nov 2018 
 		\item \textit{\href{https://www.researchgate.net/publication/318039077_Postroenie_i_realizacia_fiziceskih_pereobuslavlivatelej_dla_zadac_vycislitelnoj_gemodinamiki}{Construction and implementation of physics-based preconditioners for problems of computational haemodynamics}}, A.~Zhiliakov\\ \href{https://elibrary.nstu.ru/source?id=61216}{BCS Thesis}, June 2017   
@@ -193,7 +198,7 @@
 		\multicolumn{2}{p{17cm}}{This is the list of software I contributed to and\,/\,or used in my research.}\vspace{3mm}\\
 		\href{https://www.igpm.rwth-aachen.de/DROPS/}{DROPS}
 			& CFD tool for simulating two-phase flows (\texttt{C++})\vspace{1mm}\\
-			& Used and augmented during Spring and Fall 2019 UH research assistantship for surface PDEs simulations\vspace{3mm}\\
+			& Used and augmented during UH research assistantship for surface PDEs simulations\vspace{3mm}\\
 		\href{https://github.com/amanzi}{AMANZI}
 			& Multi-process HPC simulator (\texttt{C++})\vspace{1mm}\\
 			& Used and augmented during Summer 2018 and Summer 2019 LANL research assistantship for implementation of the ASC method\vspace{3mm}\\
@@ -207,9 +212,10 @@
 	
 	\vfill
 	
-	\begin{flushright}
-		\small
-		\color{Gray}{\today\\ \url{https://www.math.uh.edu/~alex/alexander_zhiliakov_cv.pdf}}
-	\end{flushright}
+	\centering\footnotesize\color{Gray}{\today\quad\url{https://www.math.uh.edu/~alex/alexander_zhiliakov_cv.pdf}}
+%	\begin{flushright}
+%		\small
+%		\color{Gray}{\today\\\url{https://www.math.uh.edu/~alex/alexander_zhiliakov_cv.pdf}}
+%	\end{flushright}
 		
 \end{document} 
