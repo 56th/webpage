@@ -10,6 +10,12 @@
 \titleformat*{\section}{\centering\large\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
 \titleformat*{\subsubsection}{\normalsize}
+\titlespacing*{\section}
+{0pt}{3mm}{3mm}
+\titlespacing*{\subsection}
+{2mm}{3mm}{3mm}
+\titlespacing*{\subsubsection}
+{2mm}{3mm}{3mm}
 % paragraph
 \setlength\parindent{0pt}
 % tabular
@@ -18,13 +24,6 @@
 \usepackage{longtable}
 \usepackage{array} % https://tex.stackexchange.com/questions/338009/right-alignment-for-plength-box-in-tabular/338010#338010
 \usepackage{etaremune}
-\usepackage{titlesec}
-\titlespacing*{\section}
-{0pt}{3mm}{3mm}
-\titlespacing*{\subsection}
-{2mm}{3mm}{3mm}
-\titlespacing*{\subsubsection}
-{2mm}{3mm}{3mm}
 
 \setlength{\LTpre}{0pt} % https://tex.stackexchange.com/questions/5683/how-to-remove-top-and-bottom-whitespace-of-longtable
 \setlength{\LTpost}{3mm}
