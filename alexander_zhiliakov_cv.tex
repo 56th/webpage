@@ -4,11 +4,13 @@
 
 % colors
 \usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{uofhclr}{RGB}{200, 16, 46}
-\definecolor{56thclr}{RGB}{135, 82, 117}
-\definecolor{minorclr}{RGB}{150, 150, 150} % \definecolor{bgclr}{RGB}{250, 250, 250}
 \definecolor{bgclr}{RGB}{250, 250, 250} % \definecolor{bgclr}{RGB}{255, 255, 255} 
 \pagecolor{bgclr}
+\definecolor{uofhclr}{RGB}{200, 16, 46}
+\colorlet{uofhclrlight}{bgclr!56!uofhclr}
+\definecolor{56thclr}{RGB}{135, 82, 117}
+\definecolor{minorclr}{RGB}{150, 150, 150} % \definecolor{bgclr}{RGB}{250, 250, 250}
+
 
 % links
 \usepackage[colorlinks]{hyperref}
@@ -17,18 +19,18 @@
 \usepackage{contour}
 \usepackage[normalem]{ulem} % https://tex.stackexchange.com/questions/333272/bibliography-messed-up-by-ulem-package
 \renewcommand{\ULdepth}{1.4pt}
-\contourlength{0.8pt}
+\contourlength{0.9pt}
 \newcommand{\myuline}[1]{%
 	\uline{\phantom{#1}}%
 	\llap{\contour{bgclr}{#1}}%
-}\small
+}
 \newcommand\xhref[2]{\href{#1}{\myuline{#2}}}
-\newcommand\xhrefs[3]{\href{#1}{#3\myuline{#2}}}
-\newcommand\xhrefd[3]{\href{#1}{#3\,``\myuline{#2}''}\vspace{1mm}}
+\newcommand\xhrefs[3]{\href{#1}{\textcolor{uofhclrlight}{#3}\myuline{#2}}}
+\newcommand\xhrefd[3]{\href{#1}{\textcolor{uofhclrlight}{#3}\,``\myuline{#2}''}\vspace{1mm}}
 \newcommand\xhrefb[4]{\href{#1}{\myuline{#2}}#4\href{#1}{\myuline{#3}}}
-\newcommand\xhrefbd[5]{\href{#1}{#5\,``\myuline{#2}}#4\phantom{#5\,``}\href{#1}{\myuline{#3}''}\vspace{1mm}}
+\newcommand\xhrefbd[5]{\href{#1}{\textcolor{uofhclrlight}{#5}\,``\myuline{#2}}#4\phantom{#5\,``}\href{#1}{\myuline{#3}''}\vspace{1mm}}
 \newcommand\xurl[1]{\textcolor{uofhclr}{\myuline{\url{#1}}}}
-\newcommand\xurld[2]{\textcolor{uofhclr}{#2\,\myuline{\url{#1}}}}
+\newcommand\xurld[2]{\textcolor{uofhclr}{\textcolor{uofhclrlight}{#2}\,\myuline{\url{#1}}}}
 
 % centering and spacing
 \usepackage{titlesec}
@@ -96,9 +98,8 @@
 	
 	\section*{CV of \Me}
 	
-	%{\centering\xhref{https://www.math.uh.edu/~alex}{math.uh.edu/${\sim}$alex}\mysep\xhref{mailto:alex@math.uh.edu}{alex@math.uh.edu}\mysep\xhrefs{https://telegram.me/fiftysixth}{fiftysixth}{\faTelegram}\par}\vskip 4mm
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
-			& \xhref{https://www.math.uh.edu/~alex}{math.uh.edu/${\sim}$alex} \mysep \xhref{mailto:alex@math.uh.edu}{alex@math.uh.edu} \mysep \xhrefs{https://telegram.me/fiftysixth}{fiftysixth}{\faTelegram}\vspace{2mm}\\
+			& \xhrefs{https://www.math.uh.edu/~alex}{math.uh.edu/${\sim}$alex}{\faHome} \mysep \xhrefs{mailto:alex@math.uh.edu}{alex@math.uh.edu}{\faEnvelope} \mysep \xhrefs{https://telegram.me/fiftysixth}{fiftysixth}{\faTelegram}\vspace{2mm}\\
 		Major skills:	
 			& Scientific computing, applied mathematics, numerical analysis, numerical optimization, (unfitted) finite element methods (FEM), preconditioners, computational fluid dynamics (CFD), computational haemodynamics, Unix\,/\,Windows, \LaTeX, VTK, Jira, git, GDB, HPC (slurm, PAPI\,/\,TAU, OpenMP, Trilinos, Intel MKL), cmake, CLion, VSCode, \texttt{C++\,11\,/\,17}, \texttt{FORTRAN}, \texttt{python}, \texttt{Wolfram Mathematica}\vspace{2mm}\\
 		Summary:
@@ -270,7 +271,7 @@
 	\subsection*{Software}
 	
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
-		\multicolumn{2}{p{17cm}}{This is the list of open source software I contributed to and\,/\,or used in my research}\vspace{4mm}\\
+		\multicolumn{2}{p{17cm}}{This is the list of open source software I contributed to and\,/\,or used in my research:}\vspace{4mm}\\
 		\xhref{https://www.igpm.rwth-aachen.de/DROPS/}{DROPS}
 			& CFD tool for simulating two-phase flows (\texttt{C++})\vspace{2mm}\\
 			& Used and augmented during UH research assistantship for the discretization of partial differential equations posed on surfaces\vspace{4mm}\\
@@ -285,5 +286,5 @@
 			& Developed during~2016\,--\,2017 as a part of the BCS project
 	\end{longtable}
 	\vfill
-	\centering\small\color{minorclr}\today\mysep\xurld{https://www.math.uh.edu/~alex/alexander_zhiliakov_cv.pdf}{\faFilePdf}
+	\centering\small\color{minorclr}Edited on \today\mysep\xhrefs{https://www.math.uh.edu/~alex/alexander_zhiliakov_cv.pdf}{Download the latest version}{\faFilePdf}
 \end{document} 
