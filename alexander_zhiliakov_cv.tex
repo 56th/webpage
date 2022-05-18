@@ -1,16 +1,27 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper, marginparsep=0pt, left=1.5cm, right=1.5cm, top=1cm, bottom=1cm, includefoot]{geometry} % [showframe]
+
+% defs
+\newcommand\Me{\textbf{Alexander Zhiliakov}}
+\newcommand\me{\textbf{A.~Zhiliakov}}
+\newcommand\docname{CV of~\Me}
+\newcommand\myrefs{\multicolumn{1}{r}{\color{minorclr}References:}}
+\newcommand\at{\multicolumn{1}{r}{\color{minorclr}@}}
+\newcommand\mysep{%
+	\color{minorclr}$\quad$---$\quad$%
+}
 
 % colors
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[usenames, dvipsnames]{xcolor}
 \definecolor{bgclr}{RGB}{250, 250, 250} % \definecolor{bgclr}{RGB}{255, 255, 255} 
-\pagecolor{bgclr}
 \definecolor{uofhclr}{RGB}{200, 16, 46}
 \colorlet{uofhclrlight}{bgclr!56!uofhclr}
 \definecolor{56thclr}{RGB}{135, 82, 117}
 \definecolor{minorclr}{RGB}{150, 150, 150} % \definecolor{bgclr}{RGB}{250, 250, 250}
 
+% page
+\usepackage[a4paper, marginparsep=0pt, left=1.5cm, right=1.5cm, top=1cm, bottom=1cm, includefoot]{geometry} % [showframe]
+\pagecolor{bgclr}
 
 % links
 \usepackage[colorlinks]{hyperref}
@@ -20,7 +31,7 @@
 \usepackage[normalem]{ulem} % https://tex.stackexchange.com/questions/333272/bibliography-messed-up-by-ulem-package
 \renewcommand{\ULdepth}{1.8pt}
 \contourlength{0.8pt}
-\newcommand{\myuline}[1]{%
+\newcommand\myuline[1]{%
 	\uline{\phantom{#1}}%
 	\llap{\contour{bgclr}{#1}}%
 }
@@ -85,25 +96,17 @@
 
 \usepackage[fixed]{fontawesome5}
 \newcommand\phantomd{\\\phantom{\faResearchgate\,``}}
-% me
-\newcommand\Me{\textbf{Alexander Zhiliakov}}
-\newcommand\me{\textbf{A.~Zhiliakov}}
-\newcommand\myrefs{\multicolumn{1}{r}{\color{minorclr}References:}}
-\newcommand\at{\multicolumn{1}{r}{\color{minorclr}@}}
-\newcommand\mysep{%
-	\color{minorclr}$\quad$---$\quad$%
-}
 
 \begin{document}
 	
-	\section*{CV of \Me}
+	\section*{\docname}
 	
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
 			& \xhrefs{https://www.math.uh.edu/~alex}{math.uh.edu/${\sim}$alex}{\faHome} \mysep \xhrefs{mailto:alex@math.uh.edu}{alex@math.uh.edu}{\faEnvelope} \mysep \xhrefs{https://telegram.me/fiftysixth}{fiftysixth}{\faTelegram}\vspace{2mm}\\
 		Major skills:	
 			& Scientific computing, applied mathematics, numerical analysis, numerical optimization, (unfitted) finite element methods (FEM), preconditioners, computational fluid dynamics (CFD), computational haemodynamics, Unix\,/\,Windows, \LaTeX, VTK, Jira, git, GDB, HPC (slurm, PAPI\,/\,TAU, OpenMP, Trilinos, Intel MKL), cmake, CLion, VSCode, \texttt{C++\,11\,/\,17}, \texttt{FORTRAN}, \texttt{python}, \texttt{Wolfram Mathematica}\vspace{2mm}\\
 		Summary:
-			& My scientific contributions can be found on~\xhref{https://www.researchgate.net/profile/Alexander_Zhiliakov}{ResearchGate} and \xhref{https://scholar.google.com/citations?user=wchxEFUAAAAJ}{Google Scholar}. Numerical simulations I contributed to are hosted on \xhref{https://www.youtube.com/channel/UCZYYi7N36vGw_gsch4zDLoA}{YouTube}. Some of my code contributions are available on \xhref{https://github.com/56thclr}{GitHub}. I ask and answer questions on scientific computing on~\xhref{https://scicomp.stackexchange.com/users/21916/56thclr}{SciComp}\vspace{2mm}\\
+			& My scientific contributions can be found on~\xhref{https://www.researchgate.net/profile/Alexander_Zhiliakov}{ResearchGate} and \xhref{https://scholar.google.com/citations?user=wchxEFUAAAAJ}{Google Scholar}. Numerical simulations I contributed to are hosted on \xhref{https://www.youtube.com/channel/UCZYYi7N36vGw_gsch4zDLoA}{YouTube}. Some of my code contributions are available on \xhref{https://github.com/56th}{GitHub}. I ask and answer questions on scientific computing on~\xhref{https://scicomp.stackexchange.com/users/21916/56th}{SciComp}\vspace{2mm}\\
 		Languages:		
 			& Russian (first), English (fluent)
 	\end{longtable}
@@ -118,17 +121,17 @@
 			\myrefs & Raghav Paul (teamlead), Nick Sarnie\vspace{4mm}\\
 		Summer~2021
 			& \textbf{Animation Graduate Technology Intern}\vspace{2mm}\\
-			\at & Walt Disney Animation Studios, \xhref{https://www.disneyanimation.com/technology/}{WDAS Technology} Research Team\vspace{2mm}\\
+			\at & Walt Disney Animation Studios, \xhref{https://www.disneyanimation.com/technology}{WDAS Technology} Research Team\vspace{2mm}\\
 			& Developing a new Nitsche's method for enforcing essential boundary conditions in Galerkin approximations of non-linear shell models\vspace{2mm}\\
 			\myrefs & Rasmus Tamstorf (mentor), Joseph Benzaken\vspace{4mm}\\
 		Summer~2020
 			& \textbf{Research Intern}\vspace{2mm}\\
-			\at & \xhref{https://corporate.exxonmobil.com/}{ExxonMobil} Upstream Research Company, Reservoir Simulation Section\vspace{2mm}\\
+			\at & \xhref{https://corporate.exxonmobil.com}{ExxonMobil} Upstream Research Company, Reservoir Simulation Section\vspace{2mm}\\
 			& Employing numerical optimization and algorithmic differentiation for implementing and researching efficient constrained mesh adaptation techniques for \xhref{https://en.wikipedia.org/wiki/Hydraulic_fracturing}{hydrofrac} simulations\vspace{2mm}\\
 			\myrefs & Vadim Dyadechko (mentor), Dakshina Valiveti (teamlead) \vspace{4mm}\\			
 		2018~--~2019
 			& \textbf{Graduate Research Assistant}\vspace{2mm}\\
-			\at & Los Alamos National Laboratory, \xhref{https://www.lanl.gov/org/ddste/aldsc/theoretical/applied-mathematics-plasma-physics/index.php}{Applied Mathematics \& Plasma Physics Group}\vspace{2mm}\\
+			\at & Los Alamos National Laboratory, \xhref{https://www.lanl.gov/org/ddste/aldsc/theoretical/applied-mathematics-plasma-physics}{Applied Mathematics \& Plasma Physics Group}\vspace{2mm}\\
 		Summer~2019
 			& Generalizing analysis and implementation of the \xhrefb{https://www.researchgate.net/publication/330912268_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{higher order approximate static}{condensation (ASC)}{ } algorithm to 3D\vspace{2mm}\\
 		Summer 2018
@@ -136,12 +139,12 @@
 			\myrefs & Daniil Svyatsky (mentor), Mikhail Shashkov, Eugene Kikinzon\vspace{4mm}\\			
 		2019~--~2022
 			& \textbf{Graduate Research Assistant}\vspace{2mm}\\
-			\at & University of Houston, \xhref{http://www.uh.edu/nsm/math/}{Department of Mathematics}\vspace{2mm}\\
+			\at & University of Houston, \xhref{http://www.uh.edu/nsm/math}{Department of Mathematics}\vspace{2mm}\\
 			& Modeling \xhref{https://www.math.uh.edu/~molshan/maniflows.html}{material surface flows} via \xhref{https://www.math.uh.edu/~molshan/tracefinite.html}{trace finite element} discretization method: investigating stability of discrete formulations, designing robust solvers \& preconditioners for surface Oseen-type problems, and performing qualitative\,/\,quantitative comparison of numerical \& experimental data for \xhref{https://www.math.uh.edu/~molshan/material.html}{surface phase separation in bio-membranes}\vspace{2mm}\\
 			\myrefs & Maxim Olshanskii (advisor), Arnold Reusken, Annalisa Quaini, Sheereen Majd, Sun Qi, Yerbol Palzhanov, Kyle Williams\vspace{4mm}\\
 		2017~--~2019
 			& \textbf{Teaching Assistant in Mathematics}\vspace{2mm}\\
-			\at & University of Houston, \xhref{http://www.uh.edu/nsm/math/}{Department of Mathematics}\vspace{2mm}\\
+			\at & University of Houston, \xhref{http://www.uh.edu/nsm/math}{Department of Mathematics}\vspace{2mm}\\
 			& Teaching, grading, and tutoring experience: Calculus I\,/\,II; Introduction to PDEs
 	\end{longtable}
 
@@ -150,16 +153,16 @@
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
 		2017~--~2022
 			& \textbf{PhD \& MS in Applied Mathematics}\vspace{2mm}\\
-			\at & University of Houston, \xhref{http://www.uh.edu/nsm/math/}{Department of Mathematics}\vspace{2mm}\\
+			\at & University of Houston, \xhref{http://www.uh.edu/nsm/math}{Department of Mathematics}\vspace{2mm}\\
 			\myrefs & Maxim Olshanskii (advisor), Ronald Hoppe, 
 			Annalisa Quaini, Andreas Mang, Alexander Mamonov, Yuri Kuznetsov, Sun Qi, Kyle Williams\vspace{4mm}\\
 		2013~--~2017
 			& \textbf{Bachelor of Applied Mathematics \& Computer Science}\vspace{2mm}\\
-			\at & Novosibirsk State Technical University, \xhref{https://en.nstu.ru/education/faculty-of-applied-mathematics-and-computer-science/}{Faculty of Applied Mathematics \& Computer Science}\vspace{2mm}\\
+			\at & Novosibirsk State Technical University, \xhref{https://en.nstu.ru/education/faculty-of-applied-mathematics-and-computer-science}{Faculty of Applied Mathematics \& Computer Science}\vspace{2mm}\\
 			\myrefs & Mikhail Balandin (advisor), Marina Persova, Mikhail Royak\vspace{4mm}\\
 		2010~--~2012
 			& \textbf{C++ Developer Qualification}\vspace{2mm}\\
-			\at & \xhref{http://www.nadip.ru/}{Novosibirsk Design \& Programming Academy}\\
+			\at & \xhref{http://www.nadip.ru}{Novosibirsk Design \& Programming Academy}\\
 	\end{longtable}
 
 	\subsection*{Publications}
@@ -215,7 +218,7 @@
 			Talk @ \xhref{https://www.siam.org/conferences/cm/conference/cse21}{SIAM Conference on Computational Science \& Engineering}\\
 			Fort Worth, TX, 1--5 Mar 2021
 		\item
-			Talk @ \xhref{https://www.math.tamu.edu/conferences/SIAMTXLA/}{SIAM Texas-Louisiana Section Annual Meeting}\\
+			Talk @ \xhref{https://www.math.tamu.edu/conferences/SIAMTXLA}{SIAM Texas-Louisiana Section Annual Meeting}\\
 			virtual meeting hosted by Texas A\&M University, 16--18~Oct~2020
 	\end{etaremune}
 
@@ -243,7 +246,7 @@
 		
 	\begin{etaremune}[resume]		
 		\item 
-			Talk @ \xhref{https://ami.nstu.ru/o-fakultete/news/1699/}{FAMCS NSTU Student Scientific Conference} on Numerical Modeling in Physics\\
+			Talk @ \xhref{https://ami.nstu.ru/o-fakultete/news/1699}{FAMCS NSTU Student Scientific Conference} on Numerical Modeling in Physics\\
 			Novosibirsk, Russia, Mar~2017
 	\end{etaremune}
 
@@ -272,7 +275,7 @@
 	
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
 		\multicolumn{2}{p{17cm}}{This is the list of open source software I contributed to and\,/\,or used in my research:}\vspace{4mm}\\
-		\xhref{https://www.igpm.rwth-aachen.de/DROPS/}{DROPS}
+		\xhref{https://www.igpm.rwth-aachen.de/DROPS}{DROPS}
 			& CFD tool for simulating two-phase flows (\texttt{C++})\vspace{2mm}\\
 			& Used and augmented during UH research assistantship for the discretization of partial differential equations posed on surfaces\vspace{4mm}\\
 		\xhref{https://github.com/amanzi}{AMANZI}
@@ -281,7 +284,7 @@
 		\xhref{https://github.com/laristra/tangram}{TANGRAM}
 			& Framework for interface reconstruction in computational physics applications (\texttt{C++})\vspace{2mm}\\
 			& Used (with minor contributions) during Summer~2019 LANL research assistantship for implementation of the moment-of-fluid interface reconstruction in 3D\vspace{4mm}\\
-		\xhref{https://github.com/CATSPDEs/}{CATS'\,PDEs}
+		\xhref{https://github.com/CATSPDEs}{CATS'\,PDEs}
 			& Modern OOP toolkit for efficient implementation of typical FEM~routines (\texttt{C++}, \texttt{FORTRAN}, and \texttt{Mathematica})\vspace{2mm}\\
 			& Developed during~2016\,--\,2017 as a part of the BCS project
 	\end{longtable}
