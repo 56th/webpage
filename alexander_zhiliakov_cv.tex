@@ -5,19 +5,19 @@
 \newcommand\Me{\textbf{Alexander Zhiliakov}}
 \newcommand\me{\textbf{A.~Zhiliakov}}
 \newcommand\docname{CV of~\Me}
+\newcommand\website{https://www.math.uh.edu/~alex/}
 \newcommand\myrefs{\multicolumn{1}{r}{\color{minorclr}References:}}
 \newcommand\at{\multicolumn{1}{r}{\color{minorclr}@}}
 \newcommand\mysep{%
-	\color{minorclr}$\quad$---$\quad$%
+	\color{minorclr}~---~%
 }
 
 % colors
 \usepackage[usenames, dvipsnames]{xcolor}
-\definecolor{bgclr}{RGB}{250, 250, 250} % \definecolor{bgclr}{RGB}{255, 255, 255} 
-\definecolor{uofhclr}{RGB}{200, 16, 46}
-\colorlet{uofhclrlight}{bgclr!56!uofhclr}
-\definecolor{56thclr}{RGB}{135, 82, 117}
-\definecolor{minorclr}{RGB}{150, 150, 150} % \definecolor{bgclr}{RGB}{250, 250, 250}
+\definecolor{bgclr}{RGB}{250, 250, 250}
+\definecolor{minorclr}{RGB}{150, 150, 150}
+\definecolor{clruofh}{RGB}{200, 16, 46}
+\colorlet{clruofhlight}{bgclr!56!clruofh}
 
 % page
 \usepackage[a4paper, marginparsep=0pt, left=1.5cm, right=1.5cm, top=1cm, bottom=1cm, includefoot]{geometry} % [showframe]
@@ -26,7 +26,7 @@
 % links
 \usepackage[colorlinks]{hyperref}
 \hypersetup{
-	linkcolor=uofhclr, citecolor=uofhclr, urlcolor=uofhclr,
+	linkcolor=clruofh, citecolor=clruofh, urlcolor=clruofh,
 	pdftitle=\docname,
 	pdfauthor=\Me,
 	pdfpagemode=FullScreen
@@ -41,12 +41,12 @@
 	\llap{\contour{bgclr}{#1}}%
 }
 \newcommand\xhref[2]{\href{#1}{\myuline{#2}}}
-\newcommand\xhrefs[3]{\href{#1}{\textcolor{uofhclrlight}{#3}\myuline{#2}}}
-\newcommand\xhrefd[3]{\href{#1}{\textcolor{uofhclrlight}{#3}\,``\myuline{#2}''}\vspace{1mm}}
+\newcommand\xhrefs[3]{\href{#1}{\textcolor{clruofhlight}{#3}\myuline{#2}}}
+\newcommand\xhrefd[3]{\href{#1}{\textcolor{clruofhlight}{#3}\,``\myuline{#2}''}\vspace{1mm}}
 \newcommand\xhrefb[4]{\href{#1}{\myuline{#2}}#4\href{#1}{\myuline{#3}}}
-\newcommand\xhrefbd[5]{\href{#1}{\textcolor{uofhclrlight}{#5}\,``\myuline{#2}}#4\phantom{#5\,``}\href{#1}{\myuline{#3}''}\vspace{1mm}}
-\newcommand\xurl[1]{\textcolor{uofhclr}{\myuline{\url{#1}}}}
-\newcommand\xurld[2]{\textcolor{uofhclr}{\textcolor{uofhclrlight}{#2}\,\myuline{\url{#1}}}}
+\newcommand\xhrefbd[5]{\href{#1}{\textcolor{clruofhlight}{#5}\,``\myuline{#2}}#4\phantom{#5\,``}\href{#1}{\myuline{#3}''}\vspace{1mm}}
+\newcommand\xurl[1]{\textcolor{clruofh}{\myuline{\url{#1}}}}
+\newcommand\xurld[2]{\textcolor{clruofh}{\textcolor{clruofhlight}{#2}\,\myuline{\url{#1}}}}
 
 % centering and spacing
 \usepackage{titlesec}
@@ -294,5 +294,5 @@
 			& Developed during~2016\,--\,2017 as a part of the BCS project
 	\end{longtable}
 	\vfill
-	\centering\small\color{minorclr}Edited on \today\mysep\xhrefs{https://www.math.uh.edu/~alex/alexander_zhiliakov_cv.pdf}{Download the latest version}{\faFilePdf}
-\end{document} 
+	\centering\small\color{minorclr}Edited on \today\mysep\xhrefs{\website alexander_zhiliakov_cv.pdf}{Download the latest version}{\faFilePdf}
+\end{document}
