@@ -1,23 +1,25 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 
+% colors
+\usepackage[usenames, dvipsnames]{xcolor}
+\definecolor{bgclr}{RGB}{250, 250, 250}
+\definecolor{clrminor}{RGB}{150, 150, 150}
+\definecolor{clruofh}{RGB}{200, 16, 46}
+\colorlet{clruofhlight}{bgclr!56!clruofh}
+
 % defs
 \newcommand\Me{\textbf{Alexander Zhiliakov}}
 \newcommand\me{\textbf{A.~Zhiliakov}}
 \newcommand\docname{CV of~\Me}
 \newcommand\website{https://www.math.uh.edu/~alex/}
-\newcommand\myrefs{\multicolumn{1}{r}{\color{minorclr}References:}}
-\newcommand\at{\multicolumn{1}{r}{\color{minorclr}@}}
+\newcommand\myrefs{\multicolumn{1}{r}{\color{clrminor}References:}}
+\newcommand\at{\multicolumn{1}{r}{\color{clrminor}@}}
+\newcommand\workspan[1]{#1}
+\newcommand\workspans[2]{#1~~--~~#2}
 \newcommand\mysep{%
-	\color{minorclr}~---~%
+	\color{clrminor}~---~%
 }
-
-% colors
-\usepackage[usenames, dvipsnames]{xcolor}
-\definecolor{bgclr}{RGB}{250, 250, 250}
-\definecolor{minorclr}{RGB}{150, 150, 150}
-\definecolor{clruofh}{RGB}{200, 16, 46}
-\colorlet{clruofhlight}{bgclr!56!clruofh}
 
 % page
 \usepackage[a4paper, marginparsep=0pt, left=1.5cm, right=1.5cm, top=1cm, bottom=1cm, includefoot]{geometry} % [showframe]
@@ -73,7 +75,7 @@
 \fancyhf{} % sets both header and footer to nothing
 \renewcommand{\headrulewidth}{0pt}
 \usepackage{lastpage}
-\cfoot{\color{minorclr}\thepage\ of \pageref*{LastPage}}
+\cfoot{\color{clrminor}\thepage\ of \pageref*{LastPage}}
 
 % https://tex.stackexchange.com/a/438744/135296
 \usepackage{etoolbox}
@@ -109,7 +111,11 @@
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
 			& \xhrefs{https://www.math.uh.edu/~alex}{math.uh.edu/${\sim}$alex}{\faHome} \mysep \xhrefs{mailto:alex@math.uh.edu}{alex@math.uh.edu}{\faEnvelope} \mysep \xhrefs{\website alexander_zhiliakov_pgp_publickey.asc}{PGP}{\faLock} \mysep \xhrefs{https://telegram.me/fiftysixth}{fiftysixth}{\faTelegram}\vspace{2mm}\\
 		Major skills:	
-			& Scientific computing, applied mathematics, numerical analysis, numerical optimization, (unfitted) finite element methods (FEM), preconditioners, computational fluid dynamics (CFD), computational hemodynamics, Unix\,/\,Windows, \LaTeX, VTK, Jira, git, GDB, HPC (slurm, PAPI\,/\,TAU, OpenMP, Trilinos, Intel MKL), cmake, CLion, VSCode, \texttt{C++\,11\,/\,17}, \texttt{FORTRAN}, \texttt{python}, \texttt{Wolfram Mathematica}\vspace{2mm}\\
+			& Scientific computing, applied mathematics, numerical analysis, numerical optimization, (unfitted) finite element methods (FEM), preconditioners, computational fluid dynamics (CFD), computational hemodynamics,\vspace{1mm}\\
+			& HPC, OOP, software design patterns,\vspace{1mm}\\
+			& C++\,11\,/\,17, C, CMake, FORTRAN, python, Wolfram Mathematica, MATLAB, Simulink, bash, JavaScript, SQL, \LaTeX, HTML\,/\,CSS, Markdown,\vspace{1mm}\\
+			& CLion, VSCode, Vim, Emacs, TeXstudio,\vspace{1mm}\\ 
+			& Unix\,/\,MacOS\,/\,Windows, Jira, Git, Perforce, GDB, Slurm, PAPI\,/\,TAU, OpenMP, Trilinos, Intel MKL, VTK\vspace{2mm}\\
 		Summary:
 			& My scientific contributions can be found on~\xhref{https://www.researchgate.net/profile/Alexander_Zhiliakov}{ResearchGate} and \xhref{https://scholar.google.com/citations?user=wchxEFUAAAAJ}{Google Scholar}. Numerical simulations I contributed to are hosted on \xhref{https://www.youtube.com/channel/UCZYYi7N36vGw_gsch4zDLoA}{YouTube}. Some of my code contributions are available on \xhref{https://github.com/56th}{GitHub}. I ask and answer questions on scientific computing on~\xhref{https://scicomp.stackexchange.com/users/21916/56th}{SciComp}\vspace{2mm}\\
 		Languages:		
@@ -119,17 +125,17 @@
 	\subsection*{Experience}
 	
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
-		Feb~2022~--
+		\workspans{Feb~2022}{}
 			& \textbf{Senior Software Engineer}\vspace{2mm}\\
 			\at & MathWorks, \xhref{https://www.mathworks.com/products/embedded-coder.html}{Embedded Coder} Team\vspace{2mm}\\
-			& Contributing to the generation of readable, compact, and fast \texttt{C}\,/\,\texttt{C++} code for embedded processors\vspace{2mm}\\
-			\myrefs & Raghav Paul (teamlead), Nick Sarnie\vspace{4mm}\\
-		Summer~2021
+			& Contributing to the generation of readable, compact, and fast C\,/\,C++ code for embedded processors\vspace{2mm}\\
+			\myrefs & Raghav Paul (manager), Nick Sarnie\vspace{4mm}\\
+		\workspan{Summer~2021}
 			& \textbf{Animation Graduate Technology Intern}\vspace{2mm}\\
 			\at & Walt Disney Animation Studios, \xhref{https://www.disneyanimation.com/technology}{WDAS Technology} Research Team\vspace{2mm}\\
 			& Developing a new Nitsche's method for enforcing essential boundary conditions in Galerkin approximations of non-linear shell models\vspace{2mm}\\
 			\myrefs & Rasmus Tamstorf (mentor), Joseph Benzaken\vspace{4mm}\\
-		Summer~2020
+		\workspan{Summer~2020}
 			& \textbf{Research Intern}\vspace{2mm}\\
 			\at & \xhref{https://corporate.exxonmobil.com}{ExxonMobil} Upstream Research Company, Reservoir Simulation Section\vspace{2mm}\\
 			& Employing numerical optimization and algorithmic differentiation for implementing and researching efficient constrained mesh adaptation techniques for \xhref{https://en.wikipedia.org/wiki/Hydraulic_fracturing}{hydrofrac} simulations\vspace{2mm}\\
@@ -137,9 +143,9 @@
 		2018~--~2019
 			& \textbf{Graduate Research Assistant}\vspace{2mm}\\
 			\at & Los Alamos National Laboratory, \xhref{https://www.lanl.gov/org/ddste/aldsc/theoretical/applied-mathematics-plasma-physics}{Applied Mathematics \& Plasma Physics Group}\vspace{2mm}\\
-		Summer~2019
+		\workspan{Summer~2019}
 			& Generalizing analysis and implementation of the \xhrefb{https://www.researchgate.net/publication/330912268_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{higher order approximate static}{condensation (ASC)}{ } algorithm to 3D\vspace{2mm}\\
-		Summer 2018
+		\workspan{Summer~2018}
 			& Improving accuracy of the \xhref{https://www.researchgate.net/publication/318300724_Approximate_static_condensation_algorithm_for_solving_multi-material_diffusion_problems_on_meshes_non-aligned_with_material_interfaces}{ASC} algorithm for multi-material diffusion problems in the mixed form posed on general polygonal meshes\vspace{2mm}\\
 			\myrefs & Daniil Svyatsky (mentor), Mikhail Shashkov, Eugene Kikinzon\vspace{4mm}\\			
 		2019~--~2022
@@ -191,7 +197,7 @@
 			\xhref{https://doi.org/10.1002/nla.2415}{Numerical Linear Algebra with Applications}, Oct~2021
 		\item 
 			\xhrefbd{https://arxiv.org/abs/2003.06972}{Error analysis of higher order trace finite element methods for the surface Stokes equa-}{tions}{\\}{\faFilePdf}\phantomd
-			T.~Junkuhn, M.~Olshanskii, A.~Reusken, \me\phantomd 
+			T.~Jankuhn, M.~Olshanskii, A.~Reusken, \me\phantomd 
 			\xhref{https://doi.org/10.1515/jnma-2020-0017}{Journal of Numerical Mathematics}, Sep~2021	
 		\item 
 			\xhrefd{https://arxiv.org/abs/1909.02990}{Inf-sup stability of the trace $\mathbf P_2$--$P_1$ Taylor--Hood elements for surface PDEs}{\faFilePdf}\phantomd
@@ -281,18 +287,18 @@
 	\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{14.6cm}}
 		\multicolumn{2}{p{17cm}}{This is the list of open source software I contributed to and\,/\,or used in my research:}\vspace{4mm}\\
 		\xhref{https://www.igpm.rwth-aachen.de/DROPS}{DROPS}
-			& CFD tool for simulating two-phase flows (\texttt{C++})\vspace{2mm}\\
+			& CFD tool for simulating two-phase flows (C++)\vspace{2mm}\\
 			& Used and augmented during UH research assistantship for the discretization of partial differential equations posed on surfaces\vspace{4mm}\\
 		\xhref{https://github.com/amanzi}{AMANZI}
-			& Multi-process HPC simulator (\texttt{C++})\vspace{2mm}\\
+			& Multi-process HPC simulator (C++)\vspace{2mm}\\
 			& Used and augmented during Summer~2018 and Summer~2019 LANL research assistantship for implementation of the \xhref{https://www.researchgate.net/publication/330912268_A_higher_order_approximate_static_condensation_method_for_multi-material_diffusion_problems}{ASC} method\vspace{4mm}\\
 		\xhref{https://github.com/laristra/tangram}{TANGRAM}
-			& Framework for interface reconstruction in computational physics applications (\texttt{C++})\vspace{2mm}\\
+			& Framework for interface reconstruction in computational physics applications (C++)\vspace{2mm}\\
 			& Used (with minor contributions) during Summer~2019 LANL research assistantship for implementation of the moment-of-fluid interface reconstruction in 3D\vspace{4mm}\\
 		\xhref{https://github.com/CATSPDEs}{CATS'\,PDEs}
-			& Modern OOP toolkit for efficient implementation of typical FEM~routines (\texttt{C++}, \texttt{FORTRAN}, and \texttt{Mathematica})\vspace{2mm}\\
+			& Modern OOP toolkit for efficient implementation of typical FEM~routines (C++, FORTRAN, and Mathematica)\vspace{2mm}\\
 			& Developed during~2016\,--\,2017 as a part of the BCS project
 	\end{longtable}
 	\vfill
-	\centering\small\color{minorclr}Edited on \today\mysep\xhrefs{\website alexander_zhiliakov_cv.pdf}{Download the latest version}{\faFilePdf}
+	\centering\small\color{clrminor}Edited on \today\mysep\xhrefs{\website alexander_zhiliakov_cv.pdf}{Download the latest version}{\faFilePdf}
 \end{document}
